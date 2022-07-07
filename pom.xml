@@ -16,5 +16,7 @@
         <module>coursemall-member</module>
         <module>coursemall-order</module>
         <module>coursemall-ware</module>
+        <module>renren-fast</module>
+
     </modules>
 </project>
