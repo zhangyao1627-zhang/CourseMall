@@ -4,6 +4,12 @@ spring:
     password: 123456
     url: jdbc:mysql://192.168.32.129/coursemall_coupon?useUnicode=true&characterEncoding=UTF-8&useSSL=false&serverTimezone=Asia/Shanghai
     driver-class-name: com.mysql.jdbc.Driver
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 192.168.32.129:8848
+  application:
+    name: coursemall-coupon
 
 # MapperScan
 # sql映射文件位置
@@ -16,4 +22,4 @@ mybatis-plus:
       logic-not-delete-value: 0
 
 server:
-  port: 8010
+  port: 8011
