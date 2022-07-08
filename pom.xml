@@ -11,12 +11,13 @@
     <packaging>pom</packaging>
 
     <modules>
+        <module>coursemall-common</module>
         <module>coursemall-coupon</module>
         <module>coursemall-courses</module>
         <module>coursemall-member</module>
         <module>coursemall-order</module>
         <module>coursemall-ware</module>
         <module>renren-fast</module>
-
+        <module>renren-generator</module>
     </modules>
 </project>
