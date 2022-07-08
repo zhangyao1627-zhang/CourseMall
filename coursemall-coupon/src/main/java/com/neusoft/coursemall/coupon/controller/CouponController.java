@@ -5,6 +5,8 @@ import java.util.Map;
 
 //import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -25,11 +27,21 @@ import com.neusoft.common.utils.R;
  * @email zhangyao1627@gmail.com
  * @date 2022-07-08 09:01:30
  */
+@RefreshScope
 @RestController
 @RequestMapping("coupon/coupon")
 public class CouponController {
     @Autowired
     private CouponService couponService;
+
+    @Value("${coupon.user.name}")//从application.properties中获取//不要写user.name，他是环境里的变量
+    private String name;
+    @Value("${coupon.user.age}")
+    private Integer age;
+    @RequestMapping("/test")
+    public R test(){
+        return R.ok().put("name",name).put("age",age);
+    }
 
     @RequestMapping("/member/list")
     public R membercoupons(){    //全系统的所有返回都返回R
