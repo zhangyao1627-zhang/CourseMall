@@ -1,1 +1,4 @@
-#### 2022-07-07-1 主要创建了相对应的板块和Github仓库
+# CourseMall
+The main part of the whole coursemall project, which includes:
+The Backend of the whole coursemall, developed with Java
+The Frontend of the project, developed with Vue, Element-UI
